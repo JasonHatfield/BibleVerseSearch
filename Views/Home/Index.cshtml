@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container text-center">
+    <h1 class="display-4">Welcome to My Bible Verse Search Project</h1>
+    <p class="lead">Developed by Jason Hatfield for CST-350</p>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h2 class="card-title">About the Application</h2>
+                        <p class="card-text">
+                            This application allows users to search for verses in the Old Testament, New Testament, or both.
+                            It is designed with a user-friendly interface that includes a search form with an input field for the search term and options to select the testament.
+                        </p>
+                        <p class="card-text">
+                            The application is built using N-Layer web architecture, applying the data access object (DAO) design pattern and incorporating object-oriented programming (OOP) principles.
+                            It ensures proper data types and data validation for all form inputs and displays accurate data entry error messages when necessary.
+                        </p>
+                        <p class="card-text">
+                            The application is part of the CST-350 course and demonstrates the application of various software engineering principles in a practical project.
+                        </p>
+                        <a class="btn btn-primary" asp-controller="Home" asp-action="Search">Go to Search</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,116 @@
+/* Global Styles */
+html {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Body Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0; /* Reset default margin */
+    padding: 20px;
+    color: #333;
+}
+
+/* Centered Text Styles */
+.text-center {
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* Heading Styles */
+h1.display-4 {
+    font-size: 2.5rem;
+    color: #444;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Add text shadow to make the header text fancy */
+}
+
+/* Paragraph Styles */
+p {
+    color: #667;
+    font-size: 1.1rem;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+    form input, form select {
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+        form input:focus, form select:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+    form button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+/* Results Section Styles */
+#results {
+    margin-top: 50px;
+}
+
+/* Card Styles */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add shadow to the cards */
+}
+
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Increase shadow size when hovered over */
+    }
+
+/* Internal Card Styles */
+.internal-card {
+    transition: 0.3s; /* Add transition for smooth animations */
+}
+
+    .internal-card:hover {
+        transform: scale(1.02); /* Slightly scale up the card when hovered over */
+    }
+
+/* Footer Styles */
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+}
+
+/* Initially hide the highlighted text */
+.highlight {
+    background-color: transparent;
+    transition: background-color 0.3s ease; /* Optional: Add transition for smooth color change */
+}
+
+/* Show the highlighted text when the card is hovered over */
+.internal-card:hover .highlight {
+    background-color: yellow;
+}

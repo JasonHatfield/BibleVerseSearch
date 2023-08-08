@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Search Page";
+}
+
+<div class="container text-center">
+    <h1 class="display-4">Bible Verse Search</h1>
+    <p>Search verses for specific words or phrases in the Old Testament, New Testament, or both.</p>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <!-- Search form -->
+                    <form id="searchForm">
+                        <input type="text" id="searchTerm" placeholder="Enter search term" required>
+                        <select id="testament">
+                            <option value="Old">Old Testament</option>
+                            <option value="New">New Testament</option>
+                            <option value="Both" selected>Both</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+
+                    <!-- Results container -->
+                    <div id="results"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Submit event handler for search form
+            $("#searchForm").on("submit", function (event) {
+                event.preventDefault();
+
+                // Perform search
+                searchVerses();
+            });
+
+            // Change event handler for testament select element
+            $("#testament").on("change", function () {
+                // Perform search
+                searchVerses();
+            });
+        });
+
+        // Function to perform search
+        function searchVerses() {
+            var searchTerm = $("#searchTerm").val();
+            var testament = $("#testament").val();
+
+            // AJAX request to get search results
+            $.ajax({
+                url: "/Home/SearchVerses",
+                type: "GET",
+                data: {
+                    searchTerm: searchTerm,
+                    testament: testament
+                },
+                success: function (data) {
+                    var resultsHtml = '';
+                    for (var i = 0; i < data.length; i++) {
+                        var text = data[i].text;
+                        // Replace the search term in the text with a highlighted version
+                        var highlightedText = text.replace(new RegExp(searchTerm, 'gi'), function (match) {
+                            return '<span class="highlight">' + match + '</span>';
+                        });
+                        resultsHtml += '<div class="card internal-card mb-3">';
+                        resultsHtml += '<div class="card-header">' + data[i].book + ' ' + data[i].chapter + ':' + data[i].verseNumber + '</div>';
+                        resultsHtml += '<div class="card-body">';
+                        resultsHtml += '<p class="card-text">' + highlightedText + '</p>'; // Use the highlighted text here
+                        resultsHtml += '</div>';
+                        resultsHtml += '</div>';
+                    }
+                    $("#results").html(resultsHtml);
+                }
+            });
+        }
+    </script>
+}
