@@ -1,11 +1,10 @@
-
 ## Bible Verse Application
 
 ### Application Details
 
 - **Create a Bible Verse Application** based on the following business requirements
 
-	- [x] Import an existing data source into a SQL server. Utilize the "scrollmapper/bible_databases" repository, available in your assigned readings, to obtain an MS SQL version of the import file.
+	- [x] Import an existing data source into an SQL server. Utilize the "[scrollmapper/bible_databases](https://github.com/scrollmapper/bible_databases)" repository, available in your assigned readings, to obtain an MS SQL version of the import file.
 	
 	- [x] Develop a **Bible Verse Search** page containing a search form with the following form elements:
 	
@@ -29,13 +28,13 @@
 	
 	- [x] Incorporate object-oriented programming (OOP) principles.
 	
-	- [x] Thoroughly document all classes, including source file and class headers.
+	- [x] Thoroughly document all classes, including source files and class headers.
 	
-	- [x] Document all class methods, providing method descriptions, return values, and exceptions thrown.
+	- [x] Document all class methods, providing method descriptions, return values, and exceptions.
 	
 	- [x] Fully document class method implementations with single inline comments.
 
-- **Design Report Document**
+- **[Click Here](https://github.com/JasonHatfield/BibleVerseSearch/blob/master/docs/DesignReport.md) to access the Project Design Report**
 	
 	- [x] Provide an explanation of the technical approach taken to design and implement the application. Include a comprehensive list of classes, methods, variables, and relevant components (beans) using UML diagrams as needed.
 	
@@ -45,6 +44,6 @@
 	
 	- [x] Include screenshots of data entry forms, forms displaying data validation errors, and search results.
 	
-	- [x] Upload the design document to the digital classroom along with a ZIP file containing the source code.
+	- [x] Upload the design document to the digital classroom and a ZIP file containing the source code.
 	
-	- [x] While APA style is not obligatory, ensure a solid level of academic writing is maintained.
+	- [x] While APA style is not obligatory, maintain a solid academic writing level.
