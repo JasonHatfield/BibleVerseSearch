@@ -1,5 +1,5 @@
 ## Bible Verse Application
-
+### **[Project Design Report](https://github.com/JasonHatfield/BibleVerseSearch/blob/master/docs/DesignReport.md)**
 ### Application Details
 
 - **Create a Bible Verse Application** based on the following business requirements
@@ -33,17 +33,3 @@
 	- [x] Document all class methods, providing method descriptions, return values, and exceptions.
 	
 	- [x] Fully document class method implementations with single inline comments.
-
-- **[Click Here](https://github.com/JasonHatfield/BibleVerseSearch/blob/master/docs/DesignReport.md) to access the Project Design Report**
-	
-	- [x] Provide an explanation of the technical approach taken to design and implement the application. Include a comprehensive list of classes, methods, variables, and relevant components (beans) using UML diagrams as needed.
-	
-	- [x] Describe the application's potential impact on a Christian community, its customer service aspects, and problem-solving capabilities.
-	
-	- [x] Include an Entity-Relationship (ER) diagram depicting the designed database.
-	
-	- [x] Include screenshots of data entry forms, forms displaying data validation errors, and search results.
-	
-	- [x] Upload the design document to the digital classroom and a ZIP file containing the source code.
-	
-	- [x] While APA style is not obligatory, maintain a solid academic writing level.
